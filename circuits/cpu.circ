@@ -39,7 +39,6 @@
   <lib desc="#BFH-Praktika" name="7"/>
   <lib desc="file#regfile.circ" name="8"/>
   <lib desc="file#mem.circ" name="9"/>
-  <lib desc="file#alu.circ" name="10"/>
   <main name="cpu"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -92,7 +91,6 @@
       <a name="facing" val="north"/>
       <a name="label" val="Clk"/>
     </comp>
-    <comp lib="10" loc="(1570,810)" name="ALU"/>
     <comp lib="3" loc="(470,590)" name="Adder">
       <a name="width" val="32"/>
     </comp>
@@ -104,23 +102,16 @@
     <comp lib="8" loc="(1260,810)" name="regfile">
       <a name="label" val="RegisterFile"/>
     </comp>
-    <comp lib="9" loc="(2170,810)" name="mem">
+    <comp lib="9" loc="(1900,830)" name="mem">
       <a name="label" val="DataMem"/>
     </comp>
     <comp lib="9" loc="(690,830)" name="mem">
       <a name="label" val="InstMem"/>
     </comp>
-    <wire from="(1000,1010)" to="(1650,1010)"/>
-    <wire from="(1000,870)" to="(1000,1010)"/>
-    <wire from="(1000,870)" to="(1040,870)"/>
     <wire from="(120,890)" to="(120,900)"/>
     <wire from="(120,900)" to="(130,900)"/>
-    <wire from="(1260,810)" to="(1350,810)"/>
-    <wire from="(1260,830)" to="(1350,830)"/>
     <wire from="(130,900)" to="(130,960)"/>
     <wire from="(150,830)" to="(210,830)"/>
-    <wire from="(1570,810)" to="(1650,810)"/>
-    <wire from="(1650,810)" to="(1650,1010)"/>
     <wire from="(210,600)" to="(210,830)"/>
     <wire from="(210,600)" to="(430,600)"/>
     <wire from="(210,830)" to="(470,830)"/>
