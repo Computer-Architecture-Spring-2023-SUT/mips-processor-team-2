@@ -342,6 +342,18 @@
     <comp lib="0" loc="(3110,700)" name="Tunnel">
       <a name="label" val="N2"/>
     </comp>
+    <comp lib="0" loc="(3150,2730)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="a_not"/>
+    </comp>
+    <comp lib="0" loc="(3150,2770)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="c_not"/>
+    </comp>
+    <comp lib="0" loc="(3150,2810)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="d_not"/>
+    </comp>
     <comp lib="0" loc="(3240,230)" name="Tunnel">
       <a name="label" val="N1"/>
     </comp>
@@ -376,6 +388,12 @@
       <a name="label" val="ALU_out"/>
       <a name="output" val="true"/>
       <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(3470,2770)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="sh_amount"/>
+      <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(3560,1030)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -686,6 +704,9 @@
       <a name="inputs" val="3"/>
     </comp>
     <comp lib="1" loc="(3200,1190)" name="OR Gate"/>
+    <comp lib="1" loc="(3280,2770)" name="AND Gate">
+      <a name="inputs" val="3"/>
+    </comp>
     <comp lib="1" loc="(3700,1290)" name="OR Gate"/>
     <comp lib="1" loc="(3710,1120)" name="OR Gate"/>
     <comp lib="1" loc="(3720,330)" name="AND Gate">
@@ -967,12 +988,20 @@
     <wire from="(3100,1170)" to="(3150,1170)"/>
     <wire from="(3100,1210)" to="(3100,1290)"/>
     <wire from="(3100,1210)" to="(3150,1210)"/>
+    <wire from="(3150,2730)" to="(3200,2730)"/>
+    <wire from="(3150,2770)" to="(3230,2770)"/>
+    <wire from="(3150,2810)" to="(3200,2810)"/>
     <wire from="(3170,230)" to="(3240,230)"/>
     <wire from="(320,900)" to="(320,920)"/>
     <wire from="(320,900)" to="(340,900)"/>
     <wire from="(320,930)" to="(320,950)"/>
     <wire from="(320,950)" to="(340,950)"/>
     <wire from="(3200,1190)" to="(3260,1190)"/>
+    <wire from="(3200,2730)" to="(3200,2750)"/>
+    <wire from="(3200,2750)" to="(3230,2750)"/>
+    <wire from="(3200,2790)" to="(3200,2810)"/>
+    <wire from="(3200,2790)" to="(3230,2790)"/>
+    <wire from="(3280,2770)" to="(3470,2770)"/>
     <wire from="(3290,2500)" to="(3340,2500)"/>
     <wire from="(3300,2260)" to="(3300,2380)"/>
     <wire from="(3300,2380)" to="(3330,2380)"/>
