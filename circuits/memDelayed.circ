@@ -34,6 +34,7 @@
   <lib desc="#Memory" name="2"/>
   <lib desc="#Base" name="3"/>
   <lib desc="file#delayModule.circ" name="4"/>
+  <lib desc="file#delayModuleOut.circ" name="5"/>
   <main name="memDelayed"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -407,14 +408,14 @@
     <comp lib="4" loc="(1000,880)" name="delayModule"/>
     <comp lib="4" loc="(1000,950)" name="delayModule"/>
     <comp lib="4" loc="(1290,370)" name="delayModule"/>
-    <comp lib="4" loc="(2200,220)" name="delayModule"/>
-    <comp lib="4" loc="(2200,290)" name="delayModule"/>
-    <comp lib="4" loc="(2200,360)" name="delayModule"/>
-    <comp lib="4" loc="(2200,430)" name="delayModule"/>
-    <comp lib="4" loc="(2200,500)" name="delayModule"/>
-    <comp lib="4" loc="(2200,570)" name="delayModule"/>
-    <comp lib="4" loc="(2200,640)" name="delayModule"/>
-    <comp lib="4" loc="(2200,710)" name="delayModule"/>
+    <comp lib="5" loc="(2200,220)" name="delayModuleOut"/>
+    <comp lib="5" loc="(2200,290)" name="delayModuleOut"/>
+    <comp lib="5" loc="(2200,360)" name="delayModuleOut"/>
+    <comp lib="5" loc="(2200,430)" name="delayModuleOut"/>
+    <comp lib="5" loc="(2200,500)" name="delayModuleOut"/>
+    <comp lib="5" loc="(2200,570)" name="delayModuleOut"/>
+    <comp lib="5" loc="(2200,640)" name="delayModuleOut"/>
+    <comp lib="5" loc="(2200,710)" name="delayModuleOut"/>
     <wire from="(1000,1020)" to="(1040,1020)"/>
     <wire from="(1000,530)" to="(1040,530)"/>
     <wire from="(1000,600)" to="(1030,600)"/>
