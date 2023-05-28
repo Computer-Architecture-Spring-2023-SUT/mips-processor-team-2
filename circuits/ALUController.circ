@@ -389,7 +389,7 @@
       <a name="output" val="true"/>
       <a name="width" val="5"/>
     </comp>
-    <comp lib="0" loc="(3470,2770)" name="Pin">
+    <comp lib="0" loc="(3490,2760)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="sh_amount"/>
@@ -707,6 +707,7 @@
     <comp lib="1" loc="(3280,2770)" name="AND Gate">
       <a name="inputs" val="3"/>
     </comp>
+    <comp lib="1" loc="(3470,2760)" name="AND Gate"/>
     <comp lib="1" loc="(3700,1290)" name="OR Gate"/>
     <comp lib="1" loc="(3710,1120)" name="OR Gate"/>
     <comp lib="1" loc="(3720,330)" name="AND Gate">
@@ -1001,14 +1002,21 @@
     <wire from="(3200,2750)" to="(3230,2750)"/>
     <wire from="(3200,2790)" to="(3200,2810)"/>
     <wire from="(3200,2790)" to="(3230,2790)"/>
-    <wire from="(3280,2770)" to="(3470,2770)"/>
+    <wire from="(3280,2770)" to="(3410,2770)"/>
     <wire from="(3290,2500)" to="(3340,2500)"/>
     <wire from="(3300,2260)" to="(3300,2380)"/>
     <wire from="(3300,2380)" to="(3330,2380)"/>
     <wire from="(3300,2400)" to="(3300,2450)"/>
     <wire from="(3300,2400)" to="(3330,2400)"/>
     <wire from="(3340,2410)" to="(3340,2500)"/>
+    <wire from="(3340,2500)" to="(3340,2750)"/>
+    <wire from="(3340,2750)" to="(3410,2750)"/>
     <wire from="(3360,2390)" to="(3440,2390)"/>
+    <wire from="(3410,2740)" to="(3410,2750)"/>
+    <wire from="(3410,2740)" to="(3420,2740)"/>
+    <wire from="(3410,2770)" to="(3410,2780)"/>
+    <wire from="(3410,2780)" to="(3420,2780)"/>
+    <wire from="(3470,2760)" to="(3490,2760)"/>
     <wire from="(3560,1030)" to="(3730,1030)"/>
     <wire from="(3560,1100)" to="(3660,1100)"/>
     <wire from="(3560,1140)" to="(3660,1140)"/>
