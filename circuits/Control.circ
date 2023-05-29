@@ -52,7 +52,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <main name="main"/>
+  <main name="Controller"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -85,11 +85,31 @@
     <tool lib="4" name="D Flip-Flop"/>
     <tool lib="4" name="Register"/>
   </toolbar>
-  <circuit name="main">
+  <circuit name="Controller">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="main"/>
+    <a name="circuit" val="Controller"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1160,380)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Opcode"/>
+      <a name="width" val="6"/>
+    </comp>
+    <comp lib="0" loc="(1160,400)" name="Constant">
+      <a name="value" val="0x20"/>
+      <a name="width" val="6"/>
+    </comp>
+    <comp lib="0" loc="(1270,390)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="LB"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(140,150)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Opcode"/>
+      <a name="width" val="6"/>
+    </comp>
     <comp lib="0" loc="(140,320)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="I5_N"/>
@@ -402,19 +422,28 @@
     <comp lib="1" loc="(920,240)" name="NOT Gate"/>
     <comp lib="1" loc="(920,40)" name="NOT Gate"/>
     <comp lib="1" loc="(920,80)" name="NOT Gate"/>
+    <comp lib="3" loc="(1230,390)" name="Comparator">
+      <a name="width" val="6"/>
+    </comp>
     <wire from="(10,290)" to="(1180,290)"/>
     <wire from="(100,830)" to="(100,860)"/>
     <wire from="(100,860)" to="(110,860)"/>
     <wire from="(1010,10)" to="(1010,280)"/>
+    <wire from="(1160,380)" to="(1190,380)"/>
+    <wire from="(1160,400)" to="(1190,400)"/>
+    <wire from="(1230,390)" to="(1270,390)"/>
+    <wire from="(140,150)" to="(180,150)"/>
     <wire from="(140,320)" to="(160,320)"/>
     <wire from="(140,360)" to="(160,360)"/>
     <wire from="(140,570)" to="(140,590)"/>
     <wire from="(140,590)" to="(160,590)"/>
     <wire from="(150,770)" to="(150,780)"/>
     <wire from="(160,880)" to="(170,880)"/>
-    <wire from="(170,110)" to="(190,110)"/>
+    <wire from="(170,110)" to="(180,110)"/>
     <wire from="(170,860)" to="(170,880)"/>
     <wire from="(170,860)" to="(220,860)"/>
+    <wire from="(180,110)" to="(180,150)"/>
+    <wire from="(180,110)" to="(190,110)"/>
     <wire from="(180,710)" to="(220,710)"/>
     <wire from="(200,780)" to="(210,780)"/>
     <wire from="(210,100)" to="(290,100)"/>
