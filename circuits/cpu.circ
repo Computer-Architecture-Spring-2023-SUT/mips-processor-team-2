@@ -48,12 +48,12 @@
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6"/>
   <lib desc="#BFH-Praktika" name="7"/>
-  <lib desc="file#regfile.circ" name="8"/>
-  <lib desc="file#singExtender.circ" name="9"/>
-  <lib desc="file#alu.circ" name="10"/>
-  <lib desc="file#ALUController.circ" name="11"/>
-  <lib desc="file#mem.circ" name="12"/>
-  <lib desc="file#Control.circ" name="13"/>
+  <lib desc="file#alu.circ" name="8"/>
+  <lib desc="file#ALUController.circ" name="9"/>
+  <lib desc="file#mem.circ" name="10"/>
+  <lib desc="file#Control.circ" name="11"/>
+  <lib desc="file#regfile.circ" name="12"/>
+  <lib desc="file#singExtender.circ" name="13"/>
   <main name="cpu"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -446,12 +446,11 @@
       <a name="facing" val="north"/>
       <a name="size" val="20"/>
     </comp>
-    <comp lib="10" loc="(1500,670)" name="regfile">
-      <a name="label" val="RegisterFile"/>
-    </comp>
-    <comp lib="11" loc="(2130,660)" name="ALU"/>
-    <comp lib="12" loc="(1420,460)" name="Controller"/>
-    <comp lib="13" loc="(1490,930)" name="signExtend"/>
+    <comp lib="10" loc="(2530,660)" name="mem"/>
+    <comp lib="10" loc="(860,760)" name="mem"/>
+    <comp lib="11" loc="(1420,460)" name="Controller"/>
+    <comp lib="12" loc="(1500,660)" name="regfile"/>
+    <comp lib="13" loc="(1500,930)" name="signExtend"/>
     <comp lib="2" loc="(1070,700)" name="Multiplexer">
       <a name="selloc" val="tr"/>
       <a name="width" val="5"/>
@@ -538,9 +537,8 @@
       <a name="label" val="PC"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="8" loc="(1880,980)" name="AluController"/>
-    <comp lib="9" loc="(2530,660)" name="mem"/>
-    <comp lib="9" loc="(860,760)" name="mem"/>
+    <comp lib="8" loc="(2130,660)" name="ALU"/>
+    <comp lib="9" loc="(1880,980)" name="AluController"/>
     <wire from="(1000,660)" to="(1000,690)"/>
     <wire from="(1000,660)" to="(1280,660)"/>
     <wire from="(1000,800)" to="(1010,800)"/>
@@ -593,14 +591,9 @@
     <wire from="(1220,720)" to="(1220,770)"/>
     <wire from="(1220,720)" to="(1280,720)"/>
     <wire from="(1230,250)" to="(1420,250)"/>
-    <wire from="(1270,670)" to="(1270,690)"/>
-    <wire from="(1270,690)" to="(1280,690)"/>
+    <wire from="(1270,670)" to="(1270,680)"/>
+    <wire from="(1270,680)" to="(1280,680)"/>
     <wire from="(1270,760)" to="(1280,760)"/>
-    <wire from="(1280,660)" to="(1280,670)"/>
-    <wire from="(1280,700)" to="(1280,710)"/>
-    <wire from="(1280,720)" to="(1280,730)"/>
-    <wire from="(1280,740)" to="(1280,750)"/>
-    <wire from="(1280,760)" to="(1280,770)"/>
     <wire from="(1290,300)" to="(1300,300)"/>
     <wire from="(1290,870)" to="(1430,870)"/>
     <wire from="(1300,290)" to="(1300,300)"/>
@@ -624,11 +617,10 @@
     <wire from="(1480,270)" to="(2260,270)"/>
     <wire from="(1480,400)" to="(1480,500)"/>
     <wire from="(1480,500)" to="(2270,500)"/>
-    <wire from="(1490,930)" to="(1650,930)"/>
-    <wire from="(1500,640)" to="(1500,670)"/>
+    <wire from="(1500,640)" to="(1500,660)"/>
     <wire from="(1500,640)" to="(1540,640)"/>
-    <wire from="(1500,680)" to="(1500,690)"/>
     <wire from="(1500,680)" to="(1620,680)"/>
+    <wire from="(1500,930)" to="(1650,930)"/>
     <wire from="(1510,440)" to="(1510,480)"/>
     <wire from="(1510,440)" to="(1540,440)"/>
     <wire from="(1510,480)" to="(2190,480)"/>
@@ -808,8 +800,7 @@
     <wire from="(640,340)" to="(810,340)"/>
     <wire from="(680,1040)" to="(880,1040)"/>
     <wire from="(850,350)" to="(1200,350)"/>
-    <wire from="(880,760)" to="(880,1040)"/>
-    <wire from="(880,760)" to="(910,760)"/>
+    <wire from="(860,760)" to="(910,760)"/>
     <wire from="(900,1000)" to="(1660,1000)"/>
     <wire from="(900,600)" to="(1050,600)"/>
     <wire from="(900,600)" to="(900,1000)"/>
@@ -823,6 +814,6 @@
     <wire from="(940,700)" to="(940,760)"/>
     <wire from="(940,830)" to="(940,930)"/>
     <wire from="(940,830)" to="(980,830)"/>
-    <wire from="(940,930)" to="(1270,930)"/>
+    <wire from="(940,930)" to="(1280,930)"/>
   </circuit>
 </project>
