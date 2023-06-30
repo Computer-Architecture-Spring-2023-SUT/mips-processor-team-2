@@ -49,17 +49,17 @@
   <lib desc="#Base" name="6"/>
   <lib desc="#BFH-Praktika" name="7"/>
   <lib desc="file#alu.circ" name="8"/>
-  <lib desc="file#memDelayed.circ" name="9"/>
-  <lib desc="file#regfile.circ" name="10"/>
-  <lib desc="file#one_clock_delay.circ" name="11"/>
-  <lib desc="file#delayModule.circ" name="12"/>
-  <lib desc="file#mem.circ" name="13"/>
-  <lib desc="file#Control.circ" name="14"/>
-  <lib desc="file#singExtender.circ" name="15"/>
-  <lib desc="file#delayModuleOut.circ" name="16"/>
-  <lib desc="file#ALUController.circ" name="17"/>
-  <lib desc="file#cache.circ" name="18"/>
-  <lib desc="file#8_clock_delay.circ" name="19"/>
+  <lib desc="file#mem.circ" name="9"/>
+  <lib desc="file#singExtender.circ" name="10"/>
+  <lib desc="file#8_clock_delay.circ" name="11"/>
+  <lib desc="file#one_clock_delay.circ" name="12"/>
+  <lib desc="file#delayModuleOut.circ" name="13"/>
+  <lib desc="file#ALUController.circ" name="14"/>
+  <lib desc="file#memDelayed.circ" name="15"/>
+  <lib desc="file#delayModule.circ" name="16"/>
+  <lib desc="file#Control.circ" name="17"/>
+  <lib desc="file#regfile.circ" name="18"/>
+  <lib desc="file#cache.circ" name="19"/>
   <main name="cpu"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -480,13 +480,13 @@
     <comp lib="1" loc="(2860,330)" name="OR Gate">
       <a name="size" val="30"/>
     </comp>
-    <comp lib="10" loc="(1790,660)" name="regfile"/>
-    <comp lib="13" loc="(860,760)" name="mem"/>
-    <comp lib="14" loc="(1710,460)" name="Controller"/>
-    <comp lib="15" loc="(1790,930)" name="signExtend"/>
-    <comp lib="17" loc="(2170,980)" name="AluController"/>
-    <comp lib="18" loc="(3120,290)" name="Cache"/>
-    <comp lib="19" loc="(3420,110)" name="eightClockDelay"/>
+    <comp lib="10" loc="(1790,930)" name="signExtend"/>
+    <comp lib="11" loc="(3420,110)" name="eightClockDelay"/>
+    <comp lib="14" loc="(2170,980)" name="AluController"/>
+    <comp lib="15" loc="(3130,660)" name="memDelayed"/>
+    <comp lib="17" loc="(1710,460)" name="Controller"/>
+    <comp lib="18" loc="(1790,660)" name="regfile"/>
+    <comp lib="19" loc="(3120,290)" name="Cache"/>
     <comp lib="2" loc="(1360,700)" name="Multiplexer">
       <a name="selloc" val="tr"/>
       <a name="width" val="5"/>
@@ -584,7 +584,7 @@
       <a name="width" val="32"/>
     </comp>
     <comp lib="8" loc="(2420,660)" name="ALU"/>
-    <comp lib="9" loc="(3130,660)" name="memDelayed"/>
+    <comp lib="9" loc="(860,760)" name="mem"/>
     <wire from="(1190,1000)" to="(1950,1000)"/>
     <wire from="(1190,600)" to="(1190,1000)"/>
     <wire from="(1190,600)" to="(1340,600)"/>
