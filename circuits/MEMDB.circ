@@ -106,14 +106,11 @@
       <a name="label" val="ALU_RES"/>
       <a name="width" val="32"/>
     </comp>
-<<<<<<< HEAD
-=======
     <comp lib="0" loc="(280,820)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="WrIdxIn"/>
       <a name="width" val="5"/>
     </comp>
->>>>>>> main
     <comp lib="0" loc="(360,60)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
@@ -157,8 +154,6 @@
       <a name="output" val="true"/>
       <a name="width" val="32"/>
     </comp>
-<<<<<<< HEAD
-=======
     <comp lib="0" loc="(520,820)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
@@ -166,7 +161,6 @@
       <a name="output" val="true"/>
       <a name="width" val="5"/>
     </comp>
->>>>>>> main
     <comp lib="4" loc="(380,200)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="1"/>
@@ -187,13 +181,10 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
     </comp>
-<<<<<<< HEAD
-=======
     <comp lib="4" loc="(380,790)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="5"/>
     </comp>
->>>>>>> main
     <comp lib="4" loc="(380,80)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
@@ -204,10 +195,7 @@
     <wire from="(280,470)" to="(380,470)"/>
     <wire from="(280,590)" to="(380,590)"/>
     <wire from="(280,700)" to="(380,700)"/>
-<<<<<<< HEAD
-=======
     <wire from="(280,820)" to="(380,820)"/>
->>>>>>> main
     <wire from="(360,150)" to="(360,270)"/>
     <wire from="(360,150)" to="(380,150)"/>
     <wire from="(360,270)" to="(360,390)"/>
@@ -219,22 +207,15 @@
     <wire from="(360,60)" to="(360,150)"/>
     <wire from="(360,630)" to="(360,740)"/>
     <wire from="(360,630)" to="(380,630)"/>
-<<<<<<< HEAD
-    <wire from="(360,740)" to="(380,740)"/>
-=======
     <wire from="(360,740)" to="(360,860)"/>
     <wire from="(360,740)" to="(380,740)"/>
     <wire from="(360,860)" to="(380,860)"/>
->>>>>>> main
     <wire from="(440,110)" to="(520,110)"/>
     <wire from="(440,230)" to="(520,230)"/>
     <wire from="(440,350)" to="(520,350)"/>
     <wire from="(440,470)" to="(520,470)"/>
     <wire from="(440,590)" to="(520,590)"/>
     <wire from="(440,700)" to="(520,700)"/>
-<<<<<<< HEAD
-=======
     <wire from="(440,820)" to="(520,820)"/>
->>>>>>> main
   </circuit>
 </project>
