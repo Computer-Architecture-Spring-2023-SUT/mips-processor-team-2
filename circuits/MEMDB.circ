@@ -80,10 +80,18 @@
     <a name="circuit" val="MEM_WB"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(280,1050)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="SyscalIN"/>
+    </comp>
     <comp lib="0" loc="(280,110)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="CacheReadDataIn"/>
       <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(280,1170)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="JRIN"/>
     </comp>
     <comp lib="0" loc="(280,230)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -111,10 +119,21 @@
       <a name="label" val="WrIdxIn"/>
       <a name="width" val="5"/>
     </comp>
+    <comp lib="0" loc="(280,930)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="PCIN"/>
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="0" loc="(360,60)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="Clock"/>
+    </comp>
+    <comp lib="0" loc="(520,1050)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="SyscallOut"/>
+      <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(520,110)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -122,6 +141,12 @@
       <a name="label" val="CacheReadOut"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(520,1170)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="JROUT"/>
+      <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(520,230)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -161,6 +186,21 @@
       <a name="output" val="true"/>
       <a name="width" val="5"/>
     </comp>
+    <comp lib="0" loc="(520,930)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="PCOUT"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(380,1020)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="1"/>
+    </comp>
+    <comp lib="4" loc="(380,1140)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="1"/>
+    </comp>
     <comp lib="4" loc="(380,200)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="1"/>
@@ -189,13 +229,23 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="4" loc="(380,900)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <wire from="(280,1050)" to="(380,1050)"/>
     <wire from="(280,110)" to="(380,110)"/>
+    <wire from="(280,1170)" to="(380,1170)"/>
     <wire from="(280,230)" to="(380,230)"/>
     <wire from="(280,350)" to="(380,350)"/>
     <wire from="(280,470)" to="(380,470)"/>
     <wire from="(280,590)" to="(380,590)"/>
     <wire from="(280,700)" to="(380,700)"/>
     <wire from="(280,820)" to="(380,820)"/>
+    <wire from="(280,930)" to="(380,930)"/>
+    <wire from="(360,1090)" to="(360,1210)"/>
+    <wire from="(360,1090)" to="(380,1090)"/>
+    <wire from="(360,1210)" to="(380,1210)"/>
     <wire from="(360,150)" to="(360,270)"/>
     <wire from="(360,150)" to="(380,150)"/>
     <wire from="(360,270)" to="(360,390)"/>
@@ -209,13 +259,19 @@
     <wire from="(360,630)" to="(380,630)"/>
     <wire from="(360,740)" to="(360,860)"/>
     <wire from="(360,740)" to="(380,740)"/>
+    <wire from="(360,860)" to="(360,970)"/>
     <wire from="(360,860)" to="(380,860)"/>
+    <wire from="(360,970)" to="(360,1090)"/>
+    <wire from="(360,970)" to="(380,970)"/>
+    <wire from="(440,1050)" to="(520,1050)"/>
     <wire from="(440,110)" to="(520,110)"/>
+    <wire from="(440,1170)" to="(520,1170)"/>
     <wire from="(440,230)" to="(520,230)"/>
     <wire from="(440,350)" to="(520,350)"/>
     <wire from="(440,470)" to="(520,470)"/>
     <wire from="(440,590)" to="(520,590)"/>
     <wire from="(440,700)" to="(520,700)"/>
     <wire from="(440,820)" to="(520,820)"/>
+    <wire from="(440,930)" to="(520,930)"/>
   </circuit>
 </project>
