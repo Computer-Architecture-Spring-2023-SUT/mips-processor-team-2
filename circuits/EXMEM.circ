@@ -108,6 +108,11 @@
       <a name="appearance" val="classic"/>
       <a name="label" val="LBIn"/>
     </comp>
+    <comp lib="0" loc="(270,1200)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="WrIdxIn"/>
+      <a name="width" val="5"/>
+    </comp>
     <comp lib="0" loc="(270,240)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="ZeroIn"/>
@@ -150,6 +155,13 @@
       <a name="facing" val="west"/>
       <a name="label" val="LBOut"/>
       <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(470,1200)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="WrIdxOut"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(470,240)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -217,6 +229,10 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="1"/>
     </comp>
+    <comp lib="4" loc="(330,1170)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="5"/>
+    </comp>
     <comp lib="4" loc="(330,210)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="1"/>
@@ -250,13 +266,16 @@
     <wire from="(1070,390)" to="(1150,390)"/>
     <wire from="(270,100)" to="(330,100)"/>
     <wire from="(270,1090)" to="(330,1090)"/>
+    <wire from="(270,1200)" to="(330,1200)"/>
     <wire from="(270,240)" to="(330,240)"/>
     <wire from="(270,380)" to="(330,380)"/>
     <wire from="(270,550)" to="(330,550)"/>
     <wire from="(270,690)" to="(330,690)"/>
     <wire from="(270,830)" to="(330,830)"/>
     <wire from="(270,950)" to="(330,950)"/>
+    <wire from="(310,1130)" to="(310,1240)"/>
     <wire from="(310,1130)" to="(330,1130)"/>
+    <wire from="(310,1240)" to="(330,1240)"/>
     <wire from="(310,140)" to="(310,280)"/>
     <wire from="(310,140)" to="(330,140)"/>
     <wire from="(310,280)" to="(310,420)"/>
@@ -276,6 +295,7 @@
     <wire from="(310,990)" to="(330,990)"/>
     <wire from="(390,100)" to="(470,100)"/>
     <wire from="(390,1090)" to="(470,1090)"/>
+    <wire from="(390,1200)" to="(470,1200)"/>
     <wire from="(390,240)" to="(470,240)"/>
     <wire from="(390,380)" to="(470,380)"/>
     <wire from="(390,550)" to="(470,550)"/>
