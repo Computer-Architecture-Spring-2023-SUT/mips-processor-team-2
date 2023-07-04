@@ -100,6 +100,13 @@
       <a name="facing" val="east"/>
       <a name="label" val="I2_N"/>
     </comp>
+    <comp lib="0" loc="(1140,380)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="pc_branch"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="0" loc="(1190,490)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="clk"/>
@@ -111,14 +118,14 @@
     <comp lib="0" loc="(1570,560)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
-      <a name="label" val="pc_branch"/>
+      <a name="label" val="pc_branch_delayed"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(1570,720)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
-      <a name="label" val="pc_4"/>
+      <a name="label" val="pc_4_delayed"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
     </comp>
@@ -333,10 +340,12 @@
     <wire from="(110,530)" to="(180,530)"/>
     <wire from="(110,560)" to="(200,560)"/>
     <wire from="(110,590)" to="(120,590)"/>
-    <wire from="(1110,560)" to="(1230,560)"/>
+    <wire from="(1110,560)" to="(1140,560)"/>
     <wire from="(1110,720)" to="(1120,720)"/>
     <wire from="(1120,710)" to="(1120,720)"/>
     <wire from="(1120,710)" to="(1230,710)"/>
+    <wire from="(1140,380)" to="(1140,560)"/>
+    <wire from="(1140,560)" to="(1230,560)"/>
     <wire from="(1190,490)" to="(1210,490)"/>
     <wire from="(120,360)" to="(120,370)"/>
     <wire from="(120,370)" to="(200,370)"/>
