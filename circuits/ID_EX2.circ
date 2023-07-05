@@ -90,6 +90,11 @@
       <a name="label" val="PCIn"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="0" loc="(310,560)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="Frz"/>
+    </comp>
+    <comp lib="0" loc="(310,590)" name="Constant"/>
     <comp lib="0" loc="(420,110)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
@@ -109,6 +114,12 @@
       <a name="output" val="true"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="0" loc="(850,570)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="reset"/>
+    </comp>
+    <comp lib="1" loc="(380,570)" name="XOR Gate"/>
     <comp lib="4" loc="(440,300)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
@@ -119,12 +130,26 @@
     </comp>
     <wire from="(270,330)" to="(440,330)"/>
     <wire from="(270,450)" to="(440,450)"/>
+    <wire from="(310,550)" to="(310,560)"/>
+    <wire from="(310,550)" to="(320,550)"/>
+    <wire from="(310,590)" to="(320,590)"/>
+    <wire from="(380,570)" to="(400,570)"/>
+    <wire from="(400,350)" to="(400,470)"/>
+    <wire from="(400,350)" to="(440,350)"/>
+    <wire from="(400,470)" to="(400,570)"/>
+    <wire from="(400,470)" to="(440,470)"/>
     <wire from="(420,110)" to="(420,370)"/>
     <wire from="(420,370)" to="(420,490)"/>
     <wire from="(420,370)" to="(440,370)"/>
     <wire from="(420,490)" to="(440,490)"/>
+    <wire from="(470,390)" to="(470,400)"/>
+    <wire from="(470,400)" to="(820,400)"/>
+    <wire from="(470,510)" to="(470,570)"/>
+    <wire from="(470,570)" to="(820,570)"/>
     <wire from="(500,330)" to="(660,330)"/>
     <wire from="(500,450)" to="(660,450)"/>
     <wire from="(660,320)" to="(660,330)"/>
+    <wire from="(820,400)" to="(820,570)"/>
+    <wire from="(820,570)" to="(850,570)"/>
   </circuit>
 </project>
