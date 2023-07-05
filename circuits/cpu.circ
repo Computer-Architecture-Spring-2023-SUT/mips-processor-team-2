@@ -33,7 +33,7 @@
   </lib>
   <lib desc="#Gates" name="1">
     <tool name="AND Gate">
-      <a name="width" val="32"/>
+      <a name="inputs" val="3"/>
     </tool>
     <tool name="OR Gate">
       <a name="facing" val="west"/>
@@ -49,24 +49,24 @@
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6"/>
   <lib desc="#BFH-Praktika" name="7"/>
-  <lib desc="file#EX_MEM2.circ" name="8"/>
-  <lib desc="file#ALUController.circ" name="9"/>
-  <lib desc="file#delayModuleOut.circ" name="10"/>
-  <lib desc="file#MEMDB.circ" name="11"/>
-  <lib desc="file#ID_EX2.circ" name="12"/>
-  <lib desc="file#memDelayed.circ" name="13"/>
-  <lib desc="file#alu.circ" name="14"/>
-  <lib desc="file#singExtender.circ" name="15"/>
-  <lib desc="file#one_clock_delay.circ" name="16"/>
-  <lib desc="file#delayModule.circ" name="17"/>
+  <lib desc="file#ID_EX2.circ" name="8"/>
+  <lib desc="file#delayModuleOut.circ" name="9"/>
+  <lib desc="file#singExtender.circ" name="10"/>
+  <lib desc="file#EX_MEM2.circ" name="11"/>
+  <lib desc="file#ALUController.circ" name="12"/>
+  <lib desc="file#one_clock_delay.circ" name="13"/>
+  <lib desc="file#delayModule.circ" name="14"/>
+  <lib desc="file#mem.circ" name="15"/>
+  <lib desc="file#regfile.circ" name="16"/>
+  <lib desc="file#memDelayed.circ" name="17"/>
   <lib desc="file#cache.circ" name="18"/>
-  <lib desc="file#EXMEM.circ" name="19"/>
-  <lib desc="file#mem.circ" name="20"/>
-  <lib desc="file#ID_EX.circ" name="21"/>
-  <lib desc="file#Control.circ" name="22"/>
-  <lib desc="file#regfile.circ" name="23"/>
-  <lib desc="file#branchDetector.circ" name="24"/>
-  <lib desc="file#branch_predictor.circ" name="25"/>
+  <lib desc="file#alu.circ" name="19"/>
+  <lib desc="file#Control.circ" name="20"/>
+  <lib desc="file#EXMEM.circ" name="21"/>
+  <lib desc="file#branch_predictor.circ" name="22"/>
+  <lib desc="file#ID_EX.circ" name="23"/>
+  <lib desc="file#MEMDB.circ" name="24"/>
+  <lib desc="file#branchDetector.circ" name="25"/>
   <main name="cpu"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -106,7 +106,7 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="clabelup" val="west"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(1120,880)" name="Tunnel">
+    <comp lib="0" loc="(1120,890)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="select_pc"/>
     </comp>
@@ -504,11 +504,6 @@
     <comp lib="0" loc="(3470,870)" name="Tunnel">
       <a name="label" val="Jump_EXMEM"/>
     </comp>
-    <comp lib="0" loc="(350,1110)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="north"/>
-      <a name="label" val="Rest"/>
-    </comp>
     <comp lib="0" loc="(350,850)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="label" val="AluRes_WB"/>
@@ -702,9 +697,17 @@
       <a name="facing" val="east"/>
       <a name="label" val="rst"/>
     </comp>
+    <comp lib="0" loc="(560,1110)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="Reset"/>
+    </comp>
     <comp lib="0" loc="(560,560)" name="Constant">
       <a name="value" val="0x4"/>
       <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(580,1090)" name="Tunnel">
+      <a name="label" val="pcReset"/>
     </comp>
     <comp lib="0" loc="(690,350)" name="Tunnel">
       <a name="facing" val="south"/>
@@ -725,6 +728,10 @@
       <a name="label" val="pc_branch"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="0" loc="(890,840)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+    </comp>
     <comp lib="0" loc="(900,230)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="label" val="select_pc"/>
@@ -741,13 +748,13 @@
       <a name="facing" val="east"/>
       <a name="label" val="rst"/>
     </comp>
-    <comp lib="0" loc="(910,840)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="clk"/>
-    </comp>
     <comp lib="0" loc="(910,880)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="aluZero"/>
+    </comp>
+    <comp lib="0" loc="(920,920)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="pcReset"/>
     </comp>
     <comp lib="0" loc="(930,1000)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -810,15 +817,16 @@
       <a name="facing" val="north"/>
       <a name="size" val="20"/>
     </comp>
-    <comp lib="11" loc="(4610,860)" name="MEM_WB"/>
-    <comp lib="12" loc="(2270,470)" name="ID_EX_PC"/>
-    <comp lib="13" loc="(4060,860)" name="memDelayed"/>
-    <comp lib="14" loc="(2880,880)" name="ALU"/>
-    <comp lib="15" loc="(1920,1150)" name="signExtend"/>
-    <comp lib="16" loc="(1160,570)" name="oneClockDelay"/>
-    <comp lib="16" loc="(1190,980)" name="oneClockDelay"/>
+    <comp lib="10" loc="(1920,1150)" name="signExtend"/>
+    <comp lib="11" loc="(3410,530)" name="EX_MEM_PC"/>
+    <comp lib="12" loc="(1930,1320)" name="AluController"/>
+    <comp lib="13" loc="(1160,570)" name="oneClockDelay"/>
+    <comp lib="13" loc="(1190,980)" name="oneClockDelay"/>
+    <comp lib="15" loc="(680,980)" name="mem"/>
+    <comp lib="16" loc="(1920,880)" name="regfile"/>
+    <comp lib="17" loc="(4060,860)" name="memDelayed"/>
     <comp lib="18" loc="(4050,490)" name="Cache"/>
-    <comp lib="19" loc="(3420,760)" name="EX_MEM"/>
+    <comp lib="19" loc="(2880,880)" name="ALU"/>
     <comp lib="2" loc="(1380,920)" name="Multiplexer">
       <a name="selloc" val="tr"/>
       <a name="width" val="5"/>
@@ -889,12 +897,12 @@
       <a name="selloc" val="tr"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="20" loc="(680,980)" name="mem"/>
-    <comp lib="21" loc="(2260,630)" name="ID_EX"/>
-    <comp lib="22" loc="(1910,650)" name="Controller"/>
-    <comp lib="23" loc="(1920,880)" name="regfile"/>
-    <comp lib="24" loc="(790,760)" name="branch_detector"/>
-    <comp lib="25" loc="(1160,760)" name="branchPredictor"/>
+    <comp lib="20" loc="(1910,650)" name="Controller"/>
+    <comp lib="21" loc="(3420,760)" name="EX_MEM"/>
+    <comp lib="22" loc="(1160,760)" name="branchPredictor"/>
+    <comp lib="23" loc="(2260,630)" name="ID_EX"/>
+    <comp lib="24" loc="(4610,860)" name="MEM_WB"/>
+    <comp lib="25" loc="(790,760)" name="branch_detector"/>
     <comp lib="3" loc="(1700,470)" name="Shifter">
       <a name="width" val="32"/>
     </comp>
@@ -933,9 +941,8 @@
       <a name="label" val="PC"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="8" loc="(3410,530)" name="EX_MEM_PC"/>
-    <comp lib="9" loc="(1930,1320)" name="AluController"/>
-    <wire from="(1120,880)" to="(1170,880)"/>
+    <comp lib="8" loc="(2270,470)" name="ID_EX_PC"/>
+    <wire from="(1120,890)" to="(1170,890)"/>
     <wire from="(1120,920)" to="(1180,920)"/>
     <wire from="(1140,250)" to="(1140,330)"/>
     <wire from="(1140,250)" to="(1300,250)"/>
@@ -947,7 +954,7 @@
     <wire from="(1160,780)" to="(1180,780)"/>
     <wire from="(1160,800)" to="(1170,800)"/>
     <wire from="(1160,820)" to="(1190,820)"/>
-    <wire from="(1170,800)" to="(1170,880)"/>
+    <wire from="(1170,800)" to="(1170,890)"/>
     <wire from="(1180,780)" to="(1180,920)"/>
     <wire from="(1190,720)" to="(1190,820)"/>
     <wire from="(1190,980)" to="(1220,980)"/>
@@ -1275,6 +1282,7 @@
     <wire from="(3490,290)" to="(3490,570)"/>
     <wire from="(3490,290)" to="(3740,290)"/>
     <wire from="(350,1040)" to="(350,1110)"/>
+    <wire from="(350,1110)" to="(540,1110)"/>
     <wire from="(350,850)" to="(350,870)"/>
     <wire from="(3530,1440)" to="(3580,1440)"/>
     <wire from="(3530,1490)" to="(3570,1490)"/>
@@ -1419,9 +1427,14 @@
     <wire from="(530,800)" to="(530,960)"/>
     <wire from="(530,800)" to="(570,800)"/>
     <wire from="(530,960)" to="(680,960)"/>
+    <wire from="(540,1090)" to="(540,1110)"/>
+    <wire from="(540,1090)" to="(560,1090)"/>
+    <wire from="(560,1090)" to="(560,1110)"/>
+    <wire from="(560,1090)" to="(580,1090)"/>
     <wire from="(560,560)" to="(660,560)"/>
     <wire from="(570,780)" to="(570,790)"/>
     <wire from="(680,960)" to="(680,980)"/>
+    <wire from="(680,980)" to="(970,980)"/>
     <wire from="(690,350)" to="(690,410)"/>
     <wire from="(700,420)" to="(780,420)"/>
     <wire from="(700,440)" to="(800,440)"/>
@@ -1441,8 +1454,7 @@
     <wire from="(800,840)" to="(800,940)"/>
     <wire from="(810,710)" to="(810,760)"/>
     <wire from="(830,800)" to="(830,900)"/>
-    <wire from="(840,980)" to="(840,1210)"/>
-    <wire from="(840,980)" to="(970,980)"/>
+    <wire from="(890,840)" to="(910,840)"/>
     <wire from="(900,230)" to="(900,300)"/>
     <wire from="(900,450)" to="(900,460)"/>
     <wire from="(900,610)" to="(910,610)"/>
@@ -1455,12 +1467,14 @@
     <wire from="(910,490)" to="(970,490)"/>
     <wire from="(910,590)" to="(910,610)"/>
     <wire from="(910,590)" to="(940,590)"/>
-    <wire from="(910,840)" to="(920,840)"/>
-    <wire from="(910,880)" to="(940,880)"/>
+    <wire from="(910,800)" to="(910,840)"/>
+    <wire from="(910,800)" to="(940,800)"/>
+    <wire from="(910,880)" to="(920,880)"/>
     <wire from="(920,610)" to="(920,640)"/>
     <wire from="(920,610)" to="(940,610)"/>
-    <wire from="(920,800)" to="(920,840)"/>
-    <wire from="(920,800)" to="(940,800)"/>
+    <wire from="(920,820)" to="(920,880)"/>
+    <wire from="(920,820)" to="(940,820)"/>
+    <wire from="(920,920)" to="(940,920)"/>
     <wire from="(930,1000)" to="(970,1000)"/>
     <wire from="(930,1030)" to="(970,1030)"/>
     <wire from="(930,280)" to="(930,310)"/>
@@ -1469,7 +1483,7 @@
     <wire from="(930,350)" to="(980,350)"/>
     <wire from="(930,470)" to="(930,570)"/>
     <wire from="(930,570)" to="(940,570)"/>
-    <wire from="(940,820)" to="(940,880)"/>
+    <wire from="(940,840)" to="(940,920)"/>
     <wire from="(970,1020)" to="(970,1030)"/>
   </circuit>
 </project>
