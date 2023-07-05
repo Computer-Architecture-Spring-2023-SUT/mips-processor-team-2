@@ -80,6 +80,11 @@
     <a name="circuit" val="MEM_WB"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(220,1280)" name="Constant"/>
+    <comp lib="0" loc="(250,1320)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="Freeze"/>
+    </comp>
     <comp lib="0" loc="(280,1050)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="SyscalIN"/>
@@ -193,6 +198,9 @@
       <a name="output" val="true"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="1" loc="(310,1310)" name="XOR Gate">
+      <a name="size" val="30"/>
+    </comp>
     <comp lib="4" loc="(380,1020)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="1"/>
@@ -233,6 +241,10 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
     </comp>
+    <wire from="(220,1280)" to="(230,1280)"/>
+    <wire from="(230,1280)" to="(230,1300)"/>
+    <wire from="(230,1300)" to="(270,1300)"/>
+    <wire from="(250,1320)" to="(270,1320)"/>
     <wire from="(280,1050)" to="(380,1050)"/>
     <wire from="(280,110)" to="(380,110)"/>
     <wire from="(280,1170)" to="(380,1170)"/>
@@ -243,6 +255,26 @@
     <wire from="(280,700)" to="(380,700)"/>
     <wire from="(280,820)" to="(380,820)"/>
     <wire from="(280,930)" to="(380,930)"/>
+    <wire from="(310,1070)" to="(310,1190)"/>
+    <wire from="(310,1070)" to="(380,1070)"/>
+    <wire from="(310,1190)" to="(310,1310)"/>
+    <wire from="(310,1190)" to="(380,1190)"/>
+    <wire from="(310,130)" to="(310,250)"/>
+    <wire from="(310,130)" to="(380,130)"/>
+    <wire from="(310,250)" to="(310,370)"/>
+    <wire from="(310,250)" to="(380,250)"/>
+    <wire from="(310,370)" to="(310,490)"/>
+    <wire from="(310,370)" to="(380,370)"/>
+    <wire from="(310,490)" to="(310,610)"/>
+    <wire from="(310,490)" to="(380,490)"/>
+    <wire from="(310,610)" to="(310,720)"/>
+    <wire from="(310,610)" to="(380,610)"/>
+    <wire from="(310,720)" to="(310,840)"/>
+    <wire from="(310,720)" to="(380,720)"/>
+    <wire from="(310,840)" to="(310,950)"/>
+    <wire from="(310,840)" to="(380,840)"/>
+    <wire from="(310,950)" to="(310,1070)"/>
+    <wire from="(310,950)" to="(380,950)"/>
     <wire from="(360,1090)" to="(360,1210)"/>
     <wire from="(360,1090)" to="(380,1090)"/>
     <wire from="(360,1210)" to="(380,1210)"/>

@@ -80,6 +80,11 @@
     <a name="circuit" val="EX_MEM_PC"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(140,630)" name="Constant"/>
+    <comp lib="0" loc="(180,670)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="Freeze"/>
+    </comp>
     <comp lib="0" loc="(260,240)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="J_PCIN"/>
@@ -121,6 +126,9 @@
       <a name="output" val="true"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="1" loc="(250,660)" name="XOR Gate">
+      <a name="size" val="30"/>
+    </comp>
     <comp lib="4" loc="(350,210)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
@@ -133,9 +141,20 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
     </comp>
+    <wire from="(140,630)" to="(170,630)"/>
+    <wire from="(170,630)" to="(170,650)"/>
+    <wire from="(170,650)" to="(210,650)"/>
+    <wire from="(180,670)" to="(210,670)"/>
+    <wire from="(250,660)" to="(310,660)"/>
     <wire from="(260,240)" to="(350,240)"/>
     <wire from="(260,360)" to="(350,360)"/>
     <wire from="(260,510)" to="(350,510)"/>
+    <wire from="(310,260)" to="(310,380)"/>
+    <wire from="(310,260)" to="(350,260)"/>
+    <wire from="(310,380)" to="(310,530)"/>
+    <wire from="(310,380)" to="(350,380)"/>
+    <wire from="(310,530)" to="(310,660)"/>
+    <wire from="(310,530)" to="(350,530)"/>
     <wire from="(330,140)" to="(330,280)"/>
     <wire from="(330,280)" to="(330,400)"/>
     <wire from="(330,280)" to="(350,280)"/>
