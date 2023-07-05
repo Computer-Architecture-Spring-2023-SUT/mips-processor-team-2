@@ -42,7 +42,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <main name="ID_EX_PC"/>
+  <main name="fiveClockDelay"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -75,72 +75,62 @@
     <tool lib="4" name="D Flip-Flop"/>
     <tool lib="4" name="Register"/>
   </toolbar>
-  <circuit name="ID_EX_PC">
+  <circuit name="fiveClockDelay">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="ID_EX_PC"/>
+    <a name="circuit" val="fiveClockDelay"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(270,330)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="label" val="J_PCIN"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(270,450)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="label" val="PCIn"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(270,560)" name="Constant"/>
-    <comp lib="0" loc="(320,600)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="label" val="Freeze"/>
-    </comp>
-    <comp lib="0" loc="(420,110)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="south"/>
-      <a name="label" val="Clock"/>
-    </comp>
-    <comp lib="0" loc="(660,330)" name="Pin">
+    <comp lib="0" loc="(1210,1220)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
-      <a name="label" val="J_PCOUT"/>
+      <a name="label" val="DataOut"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(660,450)" name="Pin">
+    <comp lib="0" loc="(560,1220)" name="Pin">
       <a name="appearance" val="classic"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="PCOut"/>
-      <a name="output" val="true"/>
+      <a name="label" val="DataIn"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="1" loc="(380,590)" name="XOR Gate">
-      <a name="size" val="30"/>
+    <comp lib="0" loc="(600,1320)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
     </comp>
-    <comp lib="4" loc="(440,300)" name="Register">
+    <comp lib="4" loc="(1080,1190)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(440,420)" name="Register">
+    <comp lib="4" loc="(640,1190)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
     </comp>
-    <wire from="(270,330)" to="(440,330)"/>
-    <wire from="(270,450)" to="(440,450)"/>
-    <wire from="(270,560)" to="(290,560)"/>
-    <wire from="(290,560)" to="(290,580)"/>
-    <wire from="(290,580)" to="(340,580)"/>
-    <wire from="(320,600)" to="(340,600)"/>
-    <wire from="(380,350)" to="(380,470)"/>
-    <wire from="(380,350)" to="(440,350)"/>
-    <wire from="(380,470)" to="(380,590)"/>
-    <wire from="(380,470)" to="(440,470)"/>
-    <wire from="(420,110)" to="(420,370)"/>
-    <wire from="(420,370)" to="(420,490)"/>
-    <wire from="(420,370)" to="(440,370)"/>
-    <wire from="(420,490)" to="(440,490)"/>
-    <wire from="(500,330)" to="(660,330)"/>
-    <wire from="(500,450)" to="(660,450)"/>
-    <wire from="(660,320)" to="(660,330)"/>
+    <comp lib="4" loc="(750,1190)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(860,1190)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(970,1190)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <wire from="(1030,1220)" to="(1080,1220)"/>
+    <wire from="(1080,1260)" to="(1080,1320)"/>
+    <wire from="(1140,1220)" to="(1210,1220)"/>
+    <wire from="(560,1220)" to="(640,1220)"/>
+    <wire from="(600,1320)" to="(640,1320)"/>
+    <wire from="(640,1260)" to="(640,1320)"/>
+    <wire from="(640,1320)" to="(750,1320)"/>
+    <wire from="(700,1220)" to="(750,1220)"/>
+    <wire from="(750,1260)" to="(750,1320)"/>
+    <wire from="(750,1320)" to="(860,1320)"/>
+    <wire from="(810,1220)" to="(860,1220)"/>
+    <wire from="(860,1260)" to="(860,1320)"/>
+    <wire from="(860,1320)" to="(970,1320)"/>
+    <wire from="(920,1220)" to="(970,1220)"/>
+    <wire from="(970,1260)" to="(970,1320)"/>
+    <wire from="(970,1320)" to="(1080,1320)"/>
   </circuit>
 </project>
