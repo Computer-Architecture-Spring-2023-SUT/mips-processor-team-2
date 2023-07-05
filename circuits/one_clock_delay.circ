@@ -85,9 +85,14 @@
       <a name="label" val="DataIn"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="0" loc="(1680,1420)" name="Constant"/>
     <comp lib="0" loc="(1690,1310)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(1690,1380)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="Frz"/>
     </comp>
     <comp lib="0" loc="(1850,1310)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -101,13 +106,20 @@
       <a name="output" val="true"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="1" loc="(1760,1400)" name="XOR Gate"/>
     <comp lib="4" loc="(1760,1200)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
     </comp>
     <wire from="(1670,1230)" to="(1760,1230)"/>
+    <wire from="(1680,1420)" to="(1700,1420)"/>
     <wire from="(1690,1310)" to="(1760,1310)"/>
+    <wire from="(1690,1380)" to="(1700,1380)"/>
+    <wire from="(1750,1250)" to="(1750,1340)"/>
+    <wire from="(1750,1250)" to="(1760,1250)"/>
+    <wire from="(1750,1340)" to="(1760,1340)"/>
     <wire from="(1760,1270)" to="(1760,1310)"/>
+    <wire from="(1760,1340)" to="(1760,1400)"/>
     <wire from="(1790,1290)" to="(1790,1310)"/>
     <wire from="(1790,1310)" to="(1850,1310)"/>
     <wire from="(1820,1230)" to="(1930,1230)"/>
